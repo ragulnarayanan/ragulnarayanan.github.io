@@ -55,8 +55,8 @@ section{padding:6rem 0;}
 /* ABOUT */
 #about{background:#000;}
 .about-grid{display:grid;grid-template-columns:320px 1fr;gap:4rem;align-items:start;}
-.about-photo-box{width:280px;height:280px;border-radius:50%;background:#0a0a0a;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;transition:border-color .3s,box-shadow .3s;overflow:hidden;position:relative;flex-shrink:0;}
-.about-photo-box:hover{border-color:var(--green);box-shadow:0 0 30px rgba(118,185,0,.2);}
+.about-photo-box{width:280px;height:280px;border-radius:50%;background:#0a0a0a;border:3px solid var(--green);display:flex;align-items:center;justify-content:center;transition:border-color .3s,box-shadow .3s;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 0 25px rgba(118,185,0,.25);}
+.about-photo-box:hover{border-color:var(--green2);box-shadow:0 0 40px rgba(118,185,0,.45);}
 .about-photo-box img{width:100%;height:100%;object-fit:cover;object-position:30% top;border-radius:50%;}
 .about-photo-box i{font-size:2.5rem;color:var(--green);opacity:.4;}
 .about-right h3{font-size:1.4rem;font-weight:800;margin-bottom:1rem;color:#fff;}
@@ -74,7 +74,7 @@ section{padding:6rem 0;}
 .ticker-wrapper::after{right:0;background:linear-gradient(to left,#000,transparent);}
 .ticker-track{display:flex;gap:2rem;width:max-content;animation:tickerMove 40s linear infinite;}
 .ticker-track:hover{animation-play-state:paused;}
-@keyframes tickerMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}</p>
+@keyframes tickerMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .skill-chip{display:flex;flex-direction:column;align-items:center;gap:1.2rem;background:var(--card);border:1px solid var(--border2);border-radius:8px;padding:2.8rem 2.2rem;min-width:180px;transition:all .25s;cursor:default;flex-shrink:0;}
 .skill-chip:hover{border-color:var(--green);box-shadow:0 0 32px rgba(118,185,0,.3);transform:translateY(-8px);}
 .skill-chip:hover .skill-chip-name{color:var(--green);}
@@ -189,13 +189,13 @@ footer span{color:var(--green);font-weight:700;}
     </div>
     <div class="about-grid">
       <div class="about-photo-box" id="photoBox">
-        <img src="https://i.ibb.co/spM4jxg0/profile.jpg"/>
+        <img src="https://i.ibb.co/1fYyng6H/image-3e8a6fda.png"/>
       </div>
       <div class="about-right">
         <h3>AI / ML Engineer & Data Scientist</h3>
-        <p>I'm a graduate student at Northeastern University completing my MS in Data Analytics Engineering (GPA 3.8/4.0, graduating April 2026). My passion lies in designing AI systems that are not just accurate, but scalable and production-ready.</p>
-        <p>With hands-on experience across pharmaceutical analytics, large-scale data migrations, and cutting-edge ML research, I bring a rare blend of engineering rigor and data science creativity. I've processed millions of records, built recommendation systems, and developed multi-agent AI systems.</p>
-        <p>I thrive at the intersection of Deep Learning, AI, and Data Engineering — building systems that actually ship.</p>
+        <p>I don't just train models — I ship them. I hold an MS in Data Analytics Engineering from Northeastern University (May 2026), and I build AI systems that are accurate, scalable, and production-ready from day one.</p>
+        <p>I've processed 6.7M+ records, orchestrated multi-agent LLM systems, migrated 150+ enterprise data objects, and shipped recommendation engines and RAG pipelines that hold up under real-world load. Pharmaceutical analytics, large-scale migrations, cutting-edge ML research — I bring engineering rigor and data science creativity to all of it.</p>
+        <p>Research-grade ideas, production-grade code. I live at the intersection of Deep Learning, Generative AI, and Data Engineering — building systems that actually ship.</p>
       </div>
     </div>
   </div>
@@ -232,6 +232,16 @@ footer span{color:var(--green);font-weight:700;}
 
     </div>
     <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card" data-cat="ai">
+        <div class="project-img"><img src="https://i.ibb.co/0VCSDf0Z/secure-local-llm.jpg"/></div>
+        <div class="project-body">
+          <div class="project-header-row"><span class="project-badge badge-ai">Text-to-SQL Agent</span><a href="https://github.com/ragulnarayanan/secure-local-db-agent" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+          <div class="project-title">Secure Local DB Agent — Offline Text-to-SQL</div>
+          <div class="project-desc">A privacy-first database assistant that lets you ask questions of your data in plain English and get answers back — powered by local LLMs running through Ollama on your own machine, so nothing ever leaves the host. Built for sensitive and regulated environments where cloud tools aren't an option, with built-in safeguards that keep every query safe and read-only.</div>
+          <div class="project-stack"><span class="stack-tag">Ollama</span><span class="stack-tag">Llama 3.1</span><span class="stack-tag">sqlglot</span><span class="stack-tag">Pydantic</span><span class="stack-tag">pandas</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Python</span></div>
+        </div>
+      </div>
 
       <div class="project-card" data-cat="ai">
         <div class="project-img"><img src="https://i.ibb.co/ksn4rH0F/Market-mind.jpg"/></div>
@@ -432,7 +442,7 @@ footer span{color:var(--green);font-weight:700;}
         <div class="edu-degree">Master of Science in Data Analytics Engineering</div>
         <div class="edu-school">Northeastern University - Boston, MA</div>
         <div class="edu-meta">Sep 2024 - May 2026</div>
-        <span class="edu-gpa">GPA: 3.8 / 4.0</span>
+        <span class="edu-gpa">GPA: 3.89 / 4.0</span>
         <div style="margin-top:1.1rem;margin-bottom:.5rem;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--green);">Courses Taken</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem;">
           <li style="color:var(--grey2);font-size:.83rem;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--green);">▸</span>Foundations of Data Analytics Engineering</li>
@@ -514,14 +524,17 @@ const skillsData=[
   {name:'Grafana',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg'},
   {name:'PostgreSQL',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'},
   {name:'Snowflake',img:'https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg'},
-  {name:'AWS',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png'},
+  {name:'AWS',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
   {name:'GCP',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
   {name:'MongoDB',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'},
   {name:'Neo4j',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg'},
-  {name:'Scikit-learn',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/260px-Scikit_learn_logo_small.svg.png'},
+  {name:'Scikit-learn',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg'},
   {name:'PyTorch',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg'},
   {name:'TensorFlow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'},
   {name:'HuggingFace',img:'https://huggingface.co/front/assets/huggingface_logo-noborder.svg'},
+  {name:'LangChain',img:'https://avatars.githubusercontent.com/u/126733545?s=200&v=4'},
+  {name:'OpenAI',img:'https://avatars.githubusercontent.com/u/14957082?s=200&v=4'},
+  {name:'Ollama',img:'https://avatars.githubusercontent.com/u/151674099?s=200&v=4'},
   {name:'Streamlit',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg'},
   {name:'dbt',img:'https://cdn.brandfetch.io/idqo3CGOOp/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B'},
   {name:'Airflow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg'},
