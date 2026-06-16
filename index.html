@@ -253,6 +253,16 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
+      <div class="project-card" data-cat="de">
+        <div class="project-img"><img src="https://i.ibb.co/sGmbwLr/ETL-vs-ELT.png"/></div>
+        <div class="project-body">
+          <div class="project-header-row"><span class="project-badge badge-de">ELT Pipeline</span><a href="https://github.com/ragulnarayanan/macromarket-elt" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+          <div class="project-title">MacroMarket ELT — Azure-Native Financial Data Platform</div>
+          <div class="project-desc">End-to-end, Azure-native ELT pipeline ingesting stock, macroeconomic (FRED), and crypto data from 4 sources into Snowflake using a medallion architecture (Bronze→Silver→Gold). Raw JSON is staged in ADLS Gen2 and loaded via external-stage COPY INTO, then transformed with dbt (20+ models, incremental facts, custom technical-indicator macros, a Snowpark Python model, 30+ data-quality tests). Orchestrated daily by Azure Data Factory under least-privilege Snowflake RBAC and Key Vault secrets with Azure DevOps CI/CD — exposing the Gold layer to LLMs through an MCP server and to users via a Streamlit dashboard.</div>
+          <div class="project-stack"><span class="stack-tag">Snowflake</span><span class="stack-tag">dbt</span><span class="stack-tag">Azure</span><span class="stack-tag">Data Factory</span><span class="stack-tag">MCP</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Python</span></div>
+        </div>
+      </div>
+
       <div class="project-card" data-cat="ai">
         <div class="project-img"><img src="https://i.ibb.co/JwMrSpJy/AICopilot-Vs-Chatbot-02.webp"/></div>
         <div class="project-body">
