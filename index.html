@@ -233,6 +233,16 @@ footer span{color:var(--green);font-weight:700;}
     </div>
     <div class="projects-grid" id="projectsGrid">
 
+       <div class="project-card" data-cat="ai"> 
+        <div class="project-img"> <img src="https://i.ibb.co/0VQty610/8840626-cc64-e76-d0b-6d262687d5-1-3-2-nolabel-computer-vision-tracking-people-and-vehicles.jpg"/> </div> 
+        <div class="project-body"> 
+          <div class="project-header-row"> <span class="project-badge badge-ai">Computer Vision</span> <a href="https://github.com/ragulnarayanan/perception-ops" class="gh-link" target="_blank"> <i class="fa-brands fa-github"></i> </a> </div> 
+          <div class="project-title"> PerceptionOps — End-to-End Traffic Object Detection Platform </div> 
+          <div class="project-desc"> Full-stack computer vision platform for traffic scene perception built around a custom-trained YOLOv8 model. Supports image, video, and live-camera inference through a Streamlit application backed by a FastAPI serving layer. Implemented Dockerized deployment, structured JSON logging, Prometheus metrics collection, and Grafana dashboards to monitor. Developed as a complete model-to-production workflow, covering dataset validation, model serving, observability, and interactive user-facing deployment. </div> 
+          <div class="project-stack"> <span class="stack-tag">YOLOv8</span> <span class="stack-tag">PyTorch</span> <span class="stack-tag">FastAPI</span> <span class="stack-tag">Streamlit</span> <span class="stack-tag">Docker</span> <span class="stack-tag">Prometheus</span> <span class="stack-tag">Grafana</span> <span class="stack-tag">OpenCV</span> </div> 
+        </div> 
+      </div>
+
       <div class="project-card" data-cat="ai">
         <div class="project-img"><img src="https://i.ibb.co/0VCSDf0Z/secure-local-llm.jpg"/></div>
         <div class="project-body">
@@ -423,10 +433,10 @@ footer span{color:var(--green);font-weight:700;}
           <div class="timeline-company">Wipro Technologies</div>
           <div class="timeline-loc">Bengaluru, India</div>
           <ul class="timeline-bullets">
-            <li>Led migration of 150+ Teradata objects to Snowflake, reducing query processing time by 30% through Star Schema redesign and columnar storage optimization.</li>
-            <li>Built scalable PySpark transformation pipelines orchestrated with Apache Airflow for automated batch processing of large enterprise datasets.</li>
-            <li>Engineered DBT models for data transformation and implemented data quality frameworks ensuring pipeline reliability across production workloads.</li>
-            <li>Collaborated with data architects to design warehouse schemas enabling faster BI reporting for business stakeholders.</li>
+            <li>Migrated 150+ Teradata objects containing retail, customer, and supply-chain data into Snowflake, ensuring metadata alignment and validated data consistency</li>
+            <li>Designed and implemented Medallion Architecture and Star Schema models in Snowflake, optimizing data transformation workflows, storage efficiency, and query performance for downstream analytics</li>
+            <li>Built Python-based semantic monitoring tools to ensure system reliability by validate data quality, enforce business rules, and trigger real-time alerts for ensuring system reliability</li>
+            <li>Optimized ETL workflows using PySpark and Airflow, cutting processing time by 30% and automating incremental data loads, enabling timely delivery of analytics-ready datasets</li>
           </ul>
         </div>
       </div>
@@ -437,10 +447,10 @@ footer span{color:var(--green);font-weight:700;}
           <div class="timeline-company">360DigiTMG</div>
           <div class="timeline-loc">Chennai, India</div>
           <ul class="timeline-bullets">
-            <li>Analyzed IQVIA pharmaceutical datasets to surface actionable insights on market trends, drug performance, and competitive positioning for client strategy teams.</li>
-            <li>Developed interactive Tableau dashboards and automated reporting workflows, improving reporting efficiency by 40% and enabling real-time data access.</li>
-            <li>Applied statistical modeling and ML-based segmentation analyses to support data-driven decisions across pharma client accounts.</li>
-            <li>Streamlined data workflows using Python and SQL, reducing manual processing overhead and improving analyst productivity.</li>
+            <li>Analyzed IQVIA pharmaceutical sales data to evaluate product performance and benchmark against competitors across multiple therapeutic categories</li>
+            <li>Transformed and modeled datasets in Snowflake using advanced SQL, improving reporting efficiency by 40% and enabling seamless integration with Tableau dashboards</li>
+            <li>Developed interactive Tableau dashboards to visualize sales trends, prescription activity (NRx & TRx), and regional performance, supporting strategic and data-driven decision-making</li>
+            <li>Performed Predictive Analytics and HCP (Healthcare Professional) profiling to forecast sales, identify high-value prescribers, and optimize marketing and sales targeting, resulting in a 25% increase in targeting precision</li>
           </ul>
         </div>
       </div>
@@ -537,7 +547,6 @@ const skillsData=[
   {name:'Python',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
   {name:'MySQL',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/960px-MySQL_textlogo.svg.png'},
   {name:'R',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg'},
-  {name:'Java',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'},
   {name:'Linux',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'},
   {name:'Tableau',img:'https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png'},
   {name:'Power BI',img:'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'},
@@ -546,6 +555,7 @@ const skillsData=[
   {name:'Snowflake',img:'https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg'},
   {name:'AWS',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
   {name:'GCP',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
+  {name:'Azure',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'},
   {name:'MongoDB',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'},
   {name:'Neo4j',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg'},
   {name:'Scikit-learn',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg'},
