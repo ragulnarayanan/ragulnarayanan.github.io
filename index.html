@@ -158,6 +158,7 @@ footer span{color:var(--green);font-weight:700;}
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#exploring">Exploring</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -167,8 +168,8 @@ footer span{color:var(--green);font-weight:700;}
   <canvas id="heroCanvas"></canvas>
   <div class="hero-content">
     <h1>Ragul Narayanan<br/><span>Magesh</span></h1>
-    <p class="hero-role">Data Analyst &nbsp;|&nbsp; Data Engineer &nbsp;|&nbsp; Data Scientist &nbsp;|&nbsp; AI / ML</p>
-    <p class="hero-desc">Building intelligent systems that transform raw data into real-world decisions. From multi-agent AI architectures to scalable ML pipelines — bridging the gap between research and production.</p>
+    <p class="hero-role">AI / ML Engineer &nbsp;|&nbsp; Data Scientist &nbsp;|&nbsp; Data Engineer</p>
+    <p class="hero-desc">I build AI systems that run in production, not just in notebooks — from multi-agent LLM pipelines and perception stacks to end-to-end ELT workflows on cloud.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -193,9 +194,22 @@ footer span{color:var(--green);font-weight:700;}
       </div>
       <div class="about-right">
         <h3>AI / ML Engineer & Data Scientist</h3>
-        <p>I don't just train models — I ship them. I hold an MS in Data Analytics Engineering from Northeastern University (May 2026), and I build AI systems that are accurate, scalable, and production-ready from day one.</p>
-        <p>I've processed 6.7M+ records, orchestrated multi-agent LLM systems, migrated 150+ enterprise data objects, and shipped recommendation engines and RAG pipelines that hold up under real-world load. Pharmaceutical analytics, large-scale migrations, cutting-edge ML research — I bring engineering rigor and data science creativity to all of it.</p>
-        <p>Research-grade ideas, production-grade code. I live at the intersection of Deep Learning, Generative AI, and Data Engineering — building systems that actually ship.</p>
+        <p>I recently graduated with an MS in Data Analytics Engineering from Northeastern University (GPA: 3.89) and I've spent the last 2+ years building data and ML systems professionally — from Snowflake migrations and ETL pipelines to predictive models on large-scale pharmaceutical data.</p>
+        <p>My recent work has been in GenAI and applied ML — I built MarketMind, a multi-agent LLM system that generates daily stock research briefs for investors, and an Azure-native ELT pipeline with dbt, Snowflake, and an MCP server for LLM-powered analytics. I've also been exploring autonomous perception — camera-LiDAR fusion, 3D detection failure analysis, and production object detection with monitoring.</p>
+        <p>I build things that deploy, not things that sit in notebooks. If it doesn't ship, it doesn't count.</p>
+        <div class="about-tags">
+          <span class="atag atag-green">GenAI / LLMs</span>
+          <span class="atag atag-green">RAG</span>
+          <span class="atag atag-green">Multi-Agent AI</span>
+          <span class="atag atag-green">MLOps</span>
+          <span class="atag atag-green">Data Engineering</span>
+          <span class="atag atag-grey">Computer Vision</span>
+          <span class="atag atag-grey">Perception</span>
+          <span class="atag atag-grey">Python</span>
+          <span class="atag atag-grey">Snowflake</span>
+          <span class="atag atag-grey">dbt</span>
+          <span class="atag atag-grey">AWS / GCP / Azure</span>
+        </div>
       </div>
     </div>
   </div>
@@ -224,7 +238,8 @@ footer span{color:var(--green);font-weight:700;}
       <div class="divider"></div>
     </div>
     <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn active" onclick="filterProjects('featured',this)">Featured</button>
       <button class="filter-btn" onclick="filterProjects('ai',this)">AI / ML</button>
       <button class="filter-btn" onclick="filterProjects('ds',this)">Data Science</button>
       <button class="filter-btn" onclick="filterProjects('de',this)">Data Engineering</button>
@@ -233,7 +248,7 @@ footer span{color:var(--green);font-weight:700;}
     </div>
     <div class="projects-grid" id="projectsGrid">
 
-       <div class="project-card" data-cat="ai"> 
+       <div class="project-card" data-cat="ai featured" style="order:4;"> 
         <div class="project-img"> <img src="https://i.ibb.co/0VQty610/8840626-cc64-e76-d0b-6d262687d5-1-3-2-nolabel-computer-vision-tracking-people-and-vehicles.jpg"/> </div> 
         <div class="project-body"> 
           <div class="project-header-row"> <span class="project-badge badge-ai">Computer Vision</span> <a href="https://github.com/ragulnarayanan/perception-ops" class="gh-link" target="_blank"> <i class="fa-brands fa-github"></i> </a> </div> 
@@ -243,7 +258,7 @@ footer span{color:var(--green);font-weight:700;}
         </div> 
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai featured" style="order:3;">
         <div class="project-img"><img src="https://i.ibb.co/0VCSDf0Z/secure-local-llm.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ai">Text-to-SQL Agent</span><a href="https://github.com/ragulnarayanan/secure-local-db-agent" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -253,7 +268,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai ds">
+      <div class="project-card" data-cat="ai ds featured" style="order:5;">
         <div class="project-img"><img src="https://i.ibb.co/zWcqXJpN/bg-3-D-cuboids.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ai">3D Perception</span><a href="https://github.com/ragulnarayanan/nuscenes-failure-atlas" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -263,7 +278,17 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai" style="order:8;">
+        <div class="project-img"><img src="https://i.ibb.co/zWcqXJpN/bg-3-D-cuboids.jpg"/></div>
+        <div class="project-body">
+          <div class="project-header-row"><span class="project-badge badge-ai">Perception</span><a href="https://github.com/ragulnarayanan/autonomous-perception-stack" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+          <div class="project-title">Autonomous Perception Stack — Camera-LiDAR Fusion</div>
+          <div class="project-desc">End-to-end AV perception pipeline on nuScenes combining YOLOv8 segmentation with LiDAR point cloud projection. Implements camera-LiDAR sensor fusion, 3D object localization, DBSCAN cluster refinement, multi-object tracking with trajectory prediction, and Bird's-Eye-View scene mapping.</div>
+          <div class="project-stack"><span class="stack-tag">YOLOv8</span><span class="stack-tag">OpenCV</span><span class="stack-tag">PyTorch</span><span class="stack-tag">nuScenes</span><span class="stack-tag">DBSCAN</span><span class="stack-tag">LiDAR</span><span class="stack-tag">Python</span></div>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="ai featured" style="order:1;">
         <div class="project-img"><img src="https://i.ibb.co/ksn4rH0F/Market-mind.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ai">Multi-Agent AI</span><a href="https://github.com/ragulnarayanan/marketmind" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -273,7 +298,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="de">
+      <div class="project-card" data-cat="de featured" style="order:2;">
         <div class="project-img"><img src="https://i.ibb.co/sGmbwLr/ETL-vs-ELT.png"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-de">ELT Pipeline</span><a href="https://github.com/ragulnarayanan/macromarket-elt" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -283,7 +308,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai" style="order:11;">
         <div class="project-img"><img src="https://i.ibb.co/JwMrSpJy/AICopilot-Vs-Chatbot-02.webp"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ai">AI Chatbot</span><a href="https://github.com/ragulnarayanan/worldcup-chatbot" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -293,7 +318,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
       
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai" style="order:13;">
         <div class="project-img"><img src="https://i.ibb.co/YBj4nfRh/oil-market.png"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ai">RAG Pipeline</span><a href="https://github.com/ragulnarayanan/oil-market-rag" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -303,7 +328,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai featured" style="order:7;">
         <div class="project-img"><img src="https://i.ibb.co/fzDVsxZN/project-recommendation.png"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ml">ML</span><a href="https://github.com/ragulnarayanan/amazon-electronics-recommendation-system" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -313,7 +338,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai featured" style="order:6;">
         <div class="project-img"><img src="https://i.ibb.co/8nNMN75k/project-echoai.webp"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-nlp">NLP / MLOps</span><a href="https://github.com/abhisek-ai/echo-ai" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -323,7 +348,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai">
+      <div class="project-card" data-cat="ai" style="order:9;">
         <div class="project-img"><img src="https://i.ibb.co/zHxBrh6W/project-yolo.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-cv">Computer Vision</span><a href="https://github.com/ragulnarayanan/cnn-object-classification" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -333,7 +358,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai ds">
+      <div class="project-card" data-cat="ai ds" style="order:10;">
         <div class="project-img"><img src="https://i.ibb.co/rKKdJJjq/project-cnn.png"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ml">Deep Learning</span><a href="https://github.com/ragulnarayanan/cnn-object-classification" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -343,7 +368,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="da">
+      <div class="project-card" data-cat="da" style="order:14;">
         <div class="project-img"><img src="https://i.ibb.co/LdVxmSDt/project-nvidia.webp"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-da">Data Analytics</span><a href="https://github.com/ragulnarayanan/nvidia-stock-analysis" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -353,7 +378,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="de">
+      <div class="project-card" data-cat="de" style="order:12;">
         <div class="project-img"><img src="https://i.ibb.co/DP0tCvMz/project-etl.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-de">Data Engineering</span><a href="https://github.com/ragulnarayanan/amazon-books-etl" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -363,7 +388,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ds ai">
+      <div class="project-card" data-cat="ds ai" style="order:17;">
         <div class="project-img"><img src="https://i.ibb.co/rGZshQxR/projrct-mlstroke.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-ml">Healthcare ML</span><a href="https://github.com/ragulnarayanan/stroke_prediction_ml" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -373,7 +398,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="da ds">
+      <div class="project-card" data-cat="da ds" style="order:16;">
         <div class="project-img"><img src="https://i.ibb.co/4w9Hb2QG/project-bike.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-da">ML</span><a href="https://github.com/ragulnarayanan/bike_sharing_ml" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -383,7 +408,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="de da">
+      <div class="project-card" data-cat="de da" style="order:18;">
         <div class="project-img"><img src="https://i.ibb.co/Dg80JTF6/project-ecommerce.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-de">DB Design</span><a href="https://github.com/ragulnarayanan/E-Commerce-Database-creation-from-scratch" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -393,7 +418,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ds da">
+      <div class="project-card" data-cat="ds da" style="order:15;">
         <div class="project-img"><img src="https://i.ibb.co/TMWDQ3pd/project-churn.webp"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-da">Predictive Analytics</span><a href="https://github.com/ragulnarayanan/customer-churn-analysis" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -403,7 +428,7 @@ footer span{color:var(--green);font-weight:700;}
         </div>
       </div>
 
-      <div class="project-card" data-cat="ds da">
+      <div class="project-card" data-cat="ds da" style="order:19;">
         <div class="project-img"><img src="https://i.ibb.co/dJ76dfGL/machine-learning-for-wine-quality-prediction-1.jpg"/></div>
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-da">ML</span><a href="https://github.com/ragulnarayanan/wine-quality-ml-api" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
@@ -435,7 +460,7 @@ footer span{color:var(--green);font-weight:700;}
           <ul class="timeline-bullets">
             <li>Migrated 150+ Teradata objects containing retail, customer, and supply-chain data into Snowflake, ensuring metadata alignment and validated data consistency</li>
             <li>Designed and implemented Medallion Architecture and Star Schema models in Snowflake, optimizing data transformation workflows, storage efficiency, and query performance for downstream analytics</li>
-            <li>Built Python-based semantic monitoring tools to ensure system reliability by validate data quality, enforce business rules, and trigger real-time alerts for ensuring system reliability</li>
+            <li>Built Python-based semantic monitoring tools to validate data quality, enforce business rules, and trigger real-time alerts, ensuring system reliability across production pipelines</li>
             <li>Optimized ETL workflows using PySpark and Airflow, cutting processing time by 30% and automating incremental data loads, enabling timely delivery of analytics-ready datasets</li>
           </ul>
         </div>
@@ -450,7 +475,7 @@ footer span{color:var(--green);font-weight:700;}
             <li>Analyzed IQVIA pharmaceutical sales data to evaluate product performance and benchmark against competitors across multiple therapeutic categories</li>
             <li>Transformed and modeled datasets in Snowflake using advanced SQL, improving reporting efficiency by 40% and enabling seamless integration with Tableau dashboards</li>
             <li>Developed interactive Tableau dashboards to visualize sales trends, prescription activity (NRx & TRx), and regional performance, supporting strategic and data-driven decision-making</li>
-            <li>Performed Predictive Analytics and HCP (Healthcare Professional) profiling to forecast sales, identify high-value prescribers, and optimize marketing and sales targeting, resulting in a 25% increase in targeting precision</li>
+            <li>Performed predictive analytics and HCP profiling to forecast sales, identify high-value prescribers, and optimize marketing and sales targeting, resulting in a 25% increase in targeting precision</li>
           </ul>
         </div>
       </div>
@@ -484,6 +509,41 @@ footer span{color:var(--green);font-weight:700;}
           <li style="color:var(--grey2);font-size:.83rem;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--green);">▸</span>Applied Generative AI</li>
           <li style="color:var(--grey2);font-size:.83rem;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--green);">▸</span>Neural Networks and Deep Learning</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORING -->
+<section id="exploring">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Growth</div>
+      <h2>Currently <span>Exploring</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div style="max-width:680px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:1.2rem 1.5rem;transition:border-color .3s;">
+          <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;">GCP Professional Machine Learning Engineer</div>
+          <div style="font-size:.78rem;color:var(--grey2);">Preparing for certification</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:1.2rem 1.5rem;transition:border-color .3s;">
+          <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;">Self-Driving Cars Specialization</div>
+          <div style="font-size:.78rem;color:var(--grey2);">University of Toronto — Coursera</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:1.2rem 1.5rem;transition:border-color .3s;">
+          <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;">Drone Systems</div>
+          <div style="font-size:.78rem;color:var(--grey2);">NPTEL course</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:1.2rem 1.5rem;transition:border-color .3s;">
+          <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;">Reading</div>
+          <div style="font-size:.78rem;color:var(--grey2);">The Complete Guide to Drones &nbsp;|&nbsp; Small Unmanned Aircraft</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:1.2rem 1.5rem;transition:border-color .3s;">
+          <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;">Autonomous Perception</div>
+          <div style="font-size:.78rem;color:var(--grey2);">Camera-LiDAR fusion, 3D detection failure analysis, and production object detection with monitoring</div>
+        </div>
       </div>
     </div>
   </div>
@@ -545,36 +605,42 @@ setInterval(spawnComet,700);
 /* SKILLS TICKER */
 const skillsData=[
   {name:'Python',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
-  {name:'MySQL',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/960px-MySQL_textlogo.svg.png'},
-  {name:'R',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg'},
+  {name:'SQL',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg'},
   {name:'Linux',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'},
-  {name:'Tableau',img:'https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png'},
-  {name:'Power BI',img:'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'},
-  {name:'Grafana',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg'},
-  {name:'PostgreSQL',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'},
-  {name:'Snowflake',img:'https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg'},
-  {name:'AWS',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
-  {name:'GCP',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
-  {name:'Azure',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'},
-  {name:'MongoDB',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'},
-  {name:'Neo4j',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg'},
-  {name:'Scikit-learn',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg'},
-  {name:'PyTorch',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg'},
-  {name:'TensorFlow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'},
-  {name:'HuggingFace',img:'https://huggingface.co/front/assets/huggingface_logo-noborder.svg'},
-  {name:'LangChain',img:'https://avatars.githubusercontent.com/u/126733545?s=200&v=4'},
-  {name:'OpenAI',img:'https://avatars.githubusercontent.com/u/14957082?s=200&v=4'},
-  {name:'Ollama',img:'https://avatars.githubusercontent.com/u/151674099?s=200&v=4'},
-  {name:'Streamlit',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg'},
-  {name:'dbt',img:'https://cdn.brandfetch.io/idqo3CGOOp/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B'},
-  {name:'Airflow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg'},
-  {name:'PySpark',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg'},
   {name:'Git',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'},
   {name:'Docker',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'},
   {name:'FastAPI',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg'},
+  {name:'LangChain',img:'https://avatars.githubusercontent.com/u/126733545?s=200&v=4'},
+  {name:'Ollama',img:'https://avatars.githubusercontent.com/u/151674099?s=200&v=4'},
+  {name:'OpenAI',img:'https://avatars.githubusercontent.com/u/14957082?s=200&v=4'},
+  {name:'HuggingFace',img:'https://huggingface.co/front/assets/huggingface_logo-noborder.svg'},
+  {name:'Pydantic',img:'https://cdn.simpleicons.org/pydantic/E92063'},
+  {name:'Qdrant',img:'https://avatars.githubusercontent.com/u/73504361'},
+  {name:'Pinecone',img:'https://avatars.githubusercontent.com/u/54333248'},
+  {name:'ChromaDB',img:'https://www.trychroma.com/favicon.ico'},
+  {name:'Scikit-learn',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg'},
+  {name:'PyTorch',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg'},
+  {name:'TensorFlow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'},
+  {name:'YOLOv8',img:'https://cdn.simpleicons.org/ultralytics'},
+  {name:'OpenCV',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg'},
+  {name:'MLflow',img:'https://cdn.simpleicons.org/mlflow/0194E2'},
+  {name:'Airflow',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg'},
+  {name:'dbt',img:'https://cdn.brandfetch.io/idqo3CGOOp/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B'},
+  {name:'PySpark',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg'},
+  {name:'Prometheus',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg'},
+  {name:'Grafana',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg'},
+  {name:'Plotly',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg'},
+  {name:'PostgreSQL',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'},
+  {name:'Snowflake',img:'https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg'},
+  {name:'MongoDB',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'},
+  {name:'AWS',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
+  {name:'GCP',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
+  {name:'Azure',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'},
+  {name:'Streamlit',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg'},
+  {name:'Tableau',img:'https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png'},
+  {name:'Power BI',img:'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'},
   {name:'NumPy',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg'},
   {name:'Pandas',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg'},
-  {name:'OpenCV',img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg'},
 ];
 const track=document.getElementById('tickerTrack');
 [...skillsData,...skillsData].forEach(s=>{
@@ -592,6 +658,8 @@ function filterProjects(cat,btn){
     card.classList.toggle('hidden',cat!=='all'&&!cats.split(' ').includes(cat));
   });
 }
+const defaultProjectFilter=document.querySelector(".filter-btn[onclick*=\"'featured'\"]");
+if(defaultProjectFilter)filterProjects('featured',defaultProjectFilter);
 </script>
 </body>
 </html>
