@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ragul Narayanan Magesh | AI/ML Data Scientist</title>
+<title>Ragul Narayanan Magesh | AI/ML Engineer</title>
 <meta name="description" content="Portfolio of Ragul Narayanan Magesh, a Data Scientist and AI/ML Engineer at Northeastern University. Specializing in Deep Learning, MLOps, and scalable data pipelines.">
 <meta name="keywords" content="Ragul Narayanan Magesh, Ragul Narayanan, Data Scientist, AI/ML Engineer, Northeastern University, Data Analytics Engineering portfolio">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -53,18 +53,23 @@ section{padding:6rem 0;}
 .divider{width:55px;height:2px;background:var(--green);margin:1rem auto 0;border-radius:1px;}
 
 /* ABOUT */
-#about{background:#000;}
-.about-grid{display:grid;grid-template-columns:320px 1fr;gap:4rem;align-items:start;}
-.about-photo-box{width:280px;height:280px;border-radius:50%;background:#0a0a0a;border:3px solid var(--green);display:flex;align-items:center;justify-content:center;transition:border-color .3s,box-shadow .3s;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 0 25px rgba(118,185,0,.25);}
-.about-photo-box:hover{border-color:var(--green2);box-shadow:0 0 40px rgba(118,185,0,.45);}
-.about-photo-box img{width:100%;height:100%;object-fit:cover;object-position:30% top;border-radius:50%;}
+#about{background:#000;min-height:100vh;display:flex;align-items:center;padding:5.5rem 0 2.5rem;}
+#about .container{width:100%;}
+#about .section-header{margin-bottom:2rem;}
+.about-grid{display:grid;grid-template-columns:230px minmax(0,1fr) 225px;gap:2.5rem;align-items:start;}
+.about-photo-box{width:230px;height:230px;background:transparent;border:none;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;flex-shrink:0;}
+.about-photo-box img{width:100%;height:100%;object-fit:contain;border-radius:16px;transition:transform .3s;}
+.about-photo-box:hover img{transform:scale(1.03);}
+.about-left{display:flex;flex-direction:column;justify-content:space-between;height:100%;gap:2rem;}
+.about-left .about-photo-box{margin-top:4rem;}
+.about-left .p-photo{display:flex;align-items:center;gap:.2rem;}
+.about-left .p-photo img{width:180px;height:160px;object-fit:contain;border-radius:14px;transition:transform .3s;}
+.about-left .p-photo img:hover{transform:scale(1.04);}
+.about-left .curly-arrow{width:46px;height:50px;flex-shrink:0;overflow:visible;}
 .about-photo-box i{font-size:2.5rem;color:var(--green);opacity:.4;}
 .about-right h3{font-size:1.4rem;font-weight:800;margin-bottom:1rem;color:#fff;}
-.about-right p{color:var(--grey2);line-height:1.8;margin-bottom:1rem;font-size:.93rem;}
-.about-tags{margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap;}
-.atag{padding:.3rem .9rem;border-radius:3px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
-.atag-green{background:rgba(118,185,0,.12);color:var(--green);border:1px solid rgba(118,185,0,.3);}
-.atag-grey{background:rgba(160,160,160,.08);color:var(--grey);border:1px solid rgba(160,160,160,.2);}
+.about-right p{color:var(--grey2);line-height:2.05;margin-bottom:1.9rem;font-size:1rem;}
+.about-right p:last-child{margin-bottom:0;}
 
 /* SKILLS */
 #skills{background:#000;padding:6rem 0;}
@@ -145,7 +150,21 @@ section{padding:6rem 0;}
 footer{background:#000;border-top:1px solid var(--border2);padding:1.5rem;text-align:center;color:var(--grey2);font-size:.78rem;letter-spacing:.5px;}
 footer span{color:var(--green);font-weight:700;}
 
-@media(max-width:768px){nav ul{display:none;}.about-grid{grid-template-columns:1fr;}.about-photo-box{width:200px;height:200px;margin:0 auto;}}
+/* ABOUT IMAGES (right rail) */
+.about-images{display:flex;flex-direction:column;gap:1.8rem;justify-content:space-between;height:100%;}
+.about-images .p-photo{display:flex;align-items:center;gap:.2rem;}
+.about-images .curly-arrow{width:46px;height:50px;flex-shrink:0;overflow:visible;}
+.about-images img{width:165px;height:165px;object-fit:contain;border-radius:14px;transition:transform .3s;}
+.about-images img:hover{transform:scale(1.04);}
+.img-frame{position:relative;display:inline-block;line-height:0;}
+.pin{position:absolute;width:20px;height:26px;pointer-events:none;filter:drop-shadow(0 3px 3px rgba(0,0,0,.55));z-index:2;top:-16px;left:50%;margin-left:-10px;}
+.about-left .p-photo .pin{top:14px;}
+.about-images .p-photo:nth-child(1) .img-frame{transform:rotate(-4deg);}
+.about-images .p-photo:nth-child(2) .img-frame{transform:rotate(3.5deg);}
+.about-images .p-photo:nth-child(3) .img-frame{transform:rotate(-3deg);}
+.about-left .p-photo .img-frame{transform:rotate(4deg);}
+
+@media(max-width:768px){nav ul{display:none;}.about-grid{grid-template-columns:1fr;}.about-photo-box{width:200px;height:200px;margin:0 auto;}.about-images{flex-direction:row;flex-wrap:wrap;justify-content:center;height:auto;}.about-images .p-photo{flex-direction:column;}.about-images .curly-arrow{width:40px;height:36px;}}
 </style>
 </head>
 <body>
@@ -189,26 +208,55 @@ footer span{color:var(--green);font-weight:700;}
       <div class="divider"></div>
     </div>
     <div class="about-grid">
-      <div class="about-photo-box" id="photoBox">
-        <img src="https://i.ibb.co/HTwL6b2V/Gemini-Generated-Image-52jmcs52jmcs52jm.png"/>
+      <div class="about-left">
+        <div class="about-photo-box" id="photoBox">
+          <img src="https://i.ibb.co/R4sPhgdw/Profile-photo.avif"/>
+        </div>
+        <div class="p-photo p-photo-left">
+          <span class="img-frame">
+            <svg class="pin" viewBox="0 0 24 32" fill="none"><line x1="12" y1="13" x2="12" y2="30" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="9" r="8" fill="#76b900"/><circle cx="9" cy="6.5" r="2.4" fill="#ffffff" opacity="0.6"/></svg>
+            <img src="https://i.ibb.co/tTKy1ws8/Bike-Photo.avif" alt="Royal Enfield Continental GT 650"/>          </span>
+          <svg class="curly-arrow" viewBox="0 0 54 56" fill="none">
+            <path d="M49,14 C30,4 36,40 11,30" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="3,3" stroke-linecap="round"/>
+            <path d="M18,24 L6,30 L18,36 Z" fill="var(--green)"/>
+          </svg>
+        </div>
       </div>
       <div class="about-right">
-        <h3>AI / ML Engineer & Data Scientist</h3>
-        <p>I recently graduated with an MS in Data Analytics Engineering from Northeastern University (GPA: 3.89) and I've spent the last 2+ years building data and ML systems professionally — from Snowflake migrations and ETL pipelines to predictive models on large-scale pharmaceutical data.</p>
-        <p>My recent work has been in GenAI and applied ML — I built MarketMind, a multi-agent LLM system that generates daily stock research briefs for investors, and an Azure-native ELT pipeline with dbt, Snowflake, and an MCP server for LLM-powered analytics. I've also been exploring autonomous perception — camera-LiDAR fusion, 3D detection failure analysis, and production object detection with monitoring.</p>
-        <p>I build things that deploy, not things that sit in notebooks. If it doesn't ship, it doesn't count.</p>
-        <div class="about-tags">
-          <span class="atag atag-green">GenAI / LLMs</span>
-          <span class="atag atag-green">RAG</span>
-          <span class="atag atag-green">Multi-Agent AI</span>
-          <span class="atag atag-green">MLOps</span>
-          <span class="atag atag-green">Data Engineering</span>
-          <span class="atag atag-grey">Computer Vision</span>
-          <span class="atag atag-grey">Perception</span>
-          <span class="atag atag-grey">Python</span>
-          <span class="atag atag-grey">Snowflake</span>
-          <span class="atag atag-grey">dbt</span>
-          <span class="atag atag-grey">AWS / GCP / Azure</span>
+        <h3>AI / ML Engineer</h3>
+        <p>I recently graduated with an MS in Data Analytics Engineering from Northeastern University and I've spent the last 2+ years building data and ML systems professionally — data pipelines, predictive models, LLM applications, and production deployments.</p>
+        <p>Lately I've gotten hooked on the physical side of AI — autonomous perception, drone systems, and how ML works in the real world, not just on screens. I've been building camera-LiDAR fusion pipelines, studying 3D detection failures on driving data, and deploying object detection services with monitoring.</p>
+        <p>Outside of work, I go for a run every day — it's how I reset. On weekends you can usually catch me at the pool table with friends. I spend time listening to Acquired, How I Built This, and the Founders podcast, and I follow financial markets (just paper trading!).</p>
+        <p>I recently picked up a mini drone and I've been teaching myself to fly it in my bedroom — started with crashes into every wall, now I can fly clean runs without hitting anything. Small steps, but it's what got me hooked on understanding how these systems work from the ground up.</p>
+        <p>Oh and a memory I'll carry for life — I've done 35,000+ km solo on my motorcycle. I've ridden through pouring rain, scorching sun, and everything in between. That road taught me more about resilience, planning under uncertainty, and just being unstoppable than any course or job ever did.</p>
+      </div>
+      <div class="about-images">
+        <div class="p-photo">
+          <svg class="curly-arrow" viewBox="0 0 54 56" fill="none">
+            <path d="M5,12 C24,4 18,40 43,30" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="3,3" stroke-linecap="round"/>
+            <path d="M36,24 L48,30 L36,36 Z" fill="var(--green)"/>
+          </svg>
+          <span class="img-frame">
+            <svg class="pin" viewBox="0 0 24 32" fill="none"><line x1="12" y1="13" x2="12" y2="30" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="9" r="8" fill="#76b900"/><circle cx="9" cy="6.5" r="2.4" fill="#ffffff" opacity="0.6"/></svg>
+            <img src="https://i.ibb.co/gsMsFj3/Drone-photo.avif" alt="Drone flying setup"/>          </span>
+        </div>
+        <div class="p-photo">
+          <svg class="curly-arrow" viewBox="0 0 54 56" fill="none">
+            <path d="M5,40 C24,48 18,12 43,26" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="3,3" stroke-linecap="round"/>
+            <path d="M36,20 L48,26 L36,32 Z" fill="var(--green)"/>
+          </svg>
+          <span class="img-frame">
+            <svg class="pin" viewBox="0 0 24 32" fill="none"><line x1="12" y1="13" x2="12" y2="30" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="9" r="8" fill="#76b900"/><circle cx="9" cy="6.5" r="2.4" fill="#ffffff" opacity="0.6"/></svg>
+            <img src="https://i.ibb.co/pv9P5Vwg/running-photo.avif" alt="Daily run"/>          </span>
+        </div>
+        <div class="p-photo">
+          <svg class="curly-arrow" viewBox="0 0 54 56" fill="none">
+            <path d="M6,14 C24,8 20,40 43,29" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="3,3" stroke-linecap="round"/>
+            <path d="M36,23 L48,29 L36,35 Z" fill="var(--green)"/>
+          </svg>
+          <span class="img-frame">
+            <svg class="pin" viewBox="0 0 24 32" fill="none"><line x1="12" y1="13" x2="12" y2="30" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="9" r="8" fill="#76b900"/><circle cx="9" cy="6.5" r="2.4" fill="#ffffff" opacity="0.6"/></svg>
+            <img src="https://i.ibb.co/35WPcWnV/Pool-Photo.avif" alt="Pool table"/>          </span>
         </div>
       </div>
     </div>
@@ -373,7 +421,7 @@ footer span{color:var(--green);font-weight:700;}
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-da">Data Analytics</span><a href="https://github.com/ragulnarayanan/nvidia-stock-analysis" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
           <div class="project-title">NVIDIA Stock Analysis & Visualization</div>
-          <div class="project-desc">Analyzed NVIDIA's stock performance from 1999 to 2025,and benchmarked against NASDAQ data using technical indicators including Moving Averages, Golden Cross, and Death Cross, with interactive dashboards built in Tableau and Flourish, published on Google Sites.</div>
+          <div class="project-desc">Analyzed NVIDIA's stock performance from 1999 to 2025, and benchmarked against NASDAQ data using technical indicators including Moving Averages, Golden Cross, and Death Cross, with interactive dashboards built in Tableau and Flourish, published on Google Sites.</div>
           <div class="project-stack"><span class="stack-tag">Tableau</span><span class="stack-tag">Flourish</span><span class="stack-tag">Data Analysis</span><span class="stack-tag">Python</span><span class="stack-tag">Time Series</span><span class="stack-tag">Data Preprocessing</span></div>
         </div>
       </div>
@@ -383,7 +431,7 @@ footer span{color:var(--green);font-weight:700;}
         <div class="project-body">
           <div class="project-header-row"><span class="project-badge badge-de">Data Engineering</span><a href="https://github.com/ragulnarayanan/amazon-books-etl" class="gh-link" target="_blank"><i class="fa-brands fa-github"></i></a></div>
           <div class="project-title">Amazon Books ETL Pipeline</div>
-          <div class="project-desc">End-to-end contanierized ETL pipeline ingesting and transforming Amazon Books dataset using Apache Airflow, Docker Compose, and PostgreSQL that automates daily scraping, transformation, and storage. Uses BeautifulSoup for extraction, PythonOperator and PostgresOperator for task orchestration, and XCom for inter-task communication.</div>
+          <div class="project-desc">End-to-end containerized ETL pipeline ingesting and transforming Amazon Books dataset using Apache Airflow, Docker Compose, and PostgreSQL that automates daily scraping, transformation, and storage. Uses BeautifulSoup for extraction, PythonOperator and PostgresOperator for task orchestration, and XCom for inter-task communication.</div>
           <div class="project-stack"><span class="stack-tag">Docker</span><span class="stack-tag">Airflow</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Python</span><span class="stack-tag">ETL</span></div>
         </div>
       </div>
@@ -454,20 +502,6 @@ footer span{color:var(--green);font-weight:700;}
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <div class="timeline-top"><span class="timeline-role">Data Engineer</span><span class="timeline-period">2022 – 2023</span></div>
-          <div class="timeline-company">Wipro Technologies</div>
-          <div class="timeline-loc">Bengaluru, India</div>
-          <ul class="timeline-bullets">
-            <li>Migrated 150+ Teradata objects containing retail, customer, and supply-chain data into Snowflake, ensuring metadata alignment and validated data consistency</li>
-            <li>Designed and implemented Medallion Architecture and Star Schema models in Snowflake, optimizing data transformation workflows, storage efficiency, and query performance for downstream analytics</li>
-            <li>Built Python-based semantic monitoring tools to validate data quality, enforce business rules, and trigger real-time alerts, ensuring system reliability across production pipelines</li>
-            <li>Optimized ETL workflows using PySpark and Airflow, cutting processing time by 30% and automating incremental data loads, enabling timely delivery of analytics-ready datasets</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
           <div class="timeline-top"><span class="timeline-role">Data Scientist</span><span class="timeline-period">2023 – 2024</span></div>
           <div class="timeline-company">360DigiTMG</div>
           <div class="timeline-loc">Chennai, India</div>
@@ -476,6 +510,20 @@ footer span{color:var(--green);font-weight:700;}
             <li>Transformed and modeled datasets in Snowflake using advanced SQL, improving reporting efficiency by 40% and enabling seamless integration with Tableau dashboards</li>
             <li>Developed interactive Tableau dashboards to visualize sales trends, prescription activity (NRx & TRx), and regional performance, supporting strategic and data-driven decision-making</li>
             <li>Performed predictive analytics and HCP profiling to forecast sales, identify high-value prescribers, and optimize marketing and sales targeting, resulting in a 25% increase in targeting precision</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-top"><span class="timeline-role">Data Engineer</span><span class="timeline-period">2022 – 2023</span></div>
+          <div class="timeline-company">Wipro Technologies</div>
+          <div class="timeline-loc">Bengaluru, India</div>
+          <ul class="timeline-bullets">
+            <li>Migrated 150+ Teradata objects containing retail, customer, and supply-chain data into Snowflake, ensuring metadata alignment and validating data consistency</li>
+            <li>Designed and implemented Medallion Architecture and Star Schema models in Snowflake, optimizing data transformation workflows, storage efficiency, and query performance for downstream analytics</li>
+            <li>Built Python-based semantic monitoring tools to validate data quality, enforce business rules, and trigger real-time alerts, ensuring system reliability across production pipelines</li>
+            <li>Optimized ETL workflows using PySpark and Airflow, cutting processing time by 30% and automating incremental data loads, enabling timely delivery of analytics-ready datasets</li>
           </ul>
         </div>
       </div>
@@ -568,7 +616,7 @@ footer span{color:var(--green);font-weight:700;}
 </section>
 
 <footer>
-  © 2026 <span>Ragul Narayanan Magesh</span> &nbsp;|&nbsp; AI/ML Data Scientist &nbsp;|&nbsp; Boston, MA
+  © 2026 <span>Ragul Narayanan Magesh</span> &nbsp;|&nbsp; AI/ML Engineer &nbsp;|&nbsp; Boston, MA
 </footer>
 
 <script>
